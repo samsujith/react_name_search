@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.scss";
+import "./style.css";
 import Header from "./components/header.js";
 import Footer from "./components/footer.js";
 import socialLogin from "./components/socialLogin.js";

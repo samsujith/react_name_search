@@ -1,0 +1,25 @@
+.babyNames div {
+    display: inline-block;
+    padding: 4px;
+    box-sizing: border-box;
+    margin: 8px;
+}
+
+.babyNames .girl {
+    background-color: #ffc0c09c;
+}
+
+.babyNames {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.babyNames .boy {
+    background-color: aqua;
+}
+.title {
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 10px;
+}

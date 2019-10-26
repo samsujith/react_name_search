@@ -1,6 +1,9 @@
 import React from 'react';
 import { GoogleLogin } from "react-google-login";
 import { GoogleLogout } from "react-google-login";
+import {Link} from 'react-router-dom';
+import Contact from './contact.js';
+
 
 export class socialLogin extends React.Component {
     constructor() {
@@ -8,7 +11,7 @@ export class socialLogin extends React.Component {
       let userDetailsLocal;
       if (localStorage.getItem("userDetails") !== null) {
         this.userDetailsLocal = localStorage.getItem("userDetails");
-        this.userDetailsLocal = JSON.parse(userDetailsLocal);
+        this.userDetailsLocal = JSON.parse(this.userDetailsLocal);
   
         console.log(this.userDetailsLocal);
         this.state = {
@@ -92,7 +95,19 @@ export class socialLogin extends React.Component {
                 </div>
               </div>{" "}
               <div className="bar" />
-              <div className="stand"> welcome to Name search App! </div>{" "}
+              <div className="stand">     
+    <div>
+      <ul>
+        
+        <li><Link to="/view">View Names</Link></li>
+      </ul>
+
+      <hr />
+
+   
+
+    </div>
+ </div>{" "}
             </div>
           )}{" "}
         </div>

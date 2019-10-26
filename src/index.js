@@ -3,17 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {socialLogin} from './components/socialLogin.js';
 import Contact from './components/contact.js';
+import babyMain from './components/babyMain.js'
 import App from './App';
-import {Route,Link,BrowserRouter as Router} from 'react-router-dom';
+import {Route,Link,BrowserRouter,HashRouter} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
-    <Router>
-        <div>
-            <Route exact path='/' component={socialLogin}></Route>
-            <Route path="/contact" component={Contact}></Route>
-        </div>
-    </Router>
+
+    <HashRouter basename="/">
+    <div>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/view">View names</Link></li>
+      </ul>
+
+      <hr />
+
+      <Route exact path="/" component={socialLogin} />
+      <Route path="/view" component={babyMain} />
+    </div>
+  </HashRouter>
 )
 
 ReactDOM.render(routing, document.getElementById('root'));
